@@ -56,7 +56,7 @@ public class Customer {
         Enumeration enum_rentals = rentals.elements();
         while (enum_rentals.hasMoreElements()){
             Rental each = (Rental) enum_rentals.nextElement();
-            result += each.getFrequentRenterPoints();
+            result += each.getFrequentRenterPoints(each.getDaysRented());
         }
         return result;
     }
